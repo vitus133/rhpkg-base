@@ -12,4 +12,4 @@ RUN echo "sslverify=false" >> /etc/yum.conf && \
   vim \
   python3-{devel,cryptography} \
   rhpkg ansible
-RUN yum autoremove && yum clean all
+RUN yum -y distro-sync && yum autoremove && yum clean all
